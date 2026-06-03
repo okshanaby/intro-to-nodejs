@@ -1,4 +1,4 @@
-import { insert, getDB, saveDB } from './db.js'
+import { insertToDB, getDB, saveDB } from './db.js'
 
 export const newNote = async (note, tags) => {
   const data = {
@@ -7,7 +7,7 @@ export const newNote = async (note, tags) => {
     id: Date.now(),
   }
 
-  await insert(data)
+  await insertToDB(data)
   return data
 }
 
