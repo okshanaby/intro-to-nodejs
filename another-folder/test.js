@@ -1,13 +1,13 @@
 import fs from 'fs'
 
-// fs.readFile('.gitignore', 'utf8', (err, data) => {
-//   if (err) {
-//     console.error('Error reading file:', err)
-//     return
-//   }
+fs.readFile('../testingFolder/new-demo.js', 'utf8', (err, data) => {
+  if (err) {
+    console.error('Error reading file:', err)
+    return
+  }
 
-//   console.log(data)
-// })
+  console.log(data)
+})
 
 // fs.writeFile('file.txt', 'Hello World', (err) => {
 //     if (err) {
@@ -28,11 +28,11 @@ import fs from 'fs'
 //   })
 
 
-fs.unlink('file.txt', (err) => {
-  if (err) {
-    console.error('Error deleting file:', err)
-    return
-  }
+// fs.unlink('file.txt', (err) => {
+//   if (err) {
+//     console.error('Error deleting file:', err)
+//     return
+//   }
 
-  console.log('File deleted')
-})
+//   console.log('File deleted')
+// })
