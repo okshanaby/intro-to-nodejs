@@ -1,26 +1,38 @@
-// import fs from "node:fs"
+import fs from 'fs'
 
-// fs.readFile("./4. File IO/1. Async in node.md", data => console.log(data))
+// fs.readFile('.gitignore', 'utf8', (err, data) => {
+//   if (err) {
+//     console.error('Error reading file:', err)
+//     return
+//   }
 
-// fs.mkdir("testingFolder", ()=> console.log("folder created"))
-
-// fs.writeFile("./testingFolder/demo.js", 'console.log("hello")', ()=> {
-//     console.log("File created")
+//   console.log(data)
 // })
 
-// fs.readdir(".", (files)=> console.log(files))
-
-// fs.stat("./testingFolder/demo.js", info=> console.log(info))
-
-// fs.rename('./testingFolder/demo.js', './testingFolder/new-demo.js', () => {
-//     console.log('File renamed')
+// fs.writeFile('file.txt', 'Hello World', (err) => {
+//     if (err) {
+//       console.error('Error writing file:', err)
+//       return
+//     }
+  
+//     console.log('File written successfully')
 //   })
 
-import fs from 'fs/promises'
+// fs.stat('file.txt', (err, info) => {
+//     if (err) {
+//       console.error('Error getting file info:', err)
+//       return
+//     }
+  
+//     console.log(info)
+//   })
 
-async function readFile() {
-  const data = await fs.readFile('./testingFolder/new-demo.js', "utf-8")
-  console.log(data)
-}
 
-readFile()
+fs.unlink('file.txt', (err) => {
+  if (err) {
+    console.error('Error deleting file:', err)
+    return
+  }
+
+  console.log('File deleted')
+})
