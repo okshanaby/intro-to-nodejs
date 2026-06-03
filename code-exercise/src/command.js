@@ -10,7 +10,6 @@ yargs(hideBin(process.argv))
         describe: 'The content of the note you want to create',
         type: 'string'
       })
-
     },
      async (argv) => {
       // logic for creating a note goes here
